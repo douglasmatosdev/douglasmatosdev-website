@@ -22,9 +22,9 @@ export function classNames(...classes: string[]): string {
 }
 
 export const navigation: Navigation[] = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Studies', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false }
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '#about', current: false },
+    { name: 'Projects', href: '#projects', current: false },
+    { name: 'Studies', href: '#studies', current: false },
+    { name: 'Contact', href: '#contact', current: false }
 ]

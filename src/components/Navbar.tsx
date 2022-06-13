@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+
 import { Fragment } from 'react'
+
 import { Disclosure, Menu } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
@@ -11,6 +14,13 @@ interface NavbarProps {
 }
 
 export function Navbar({ navigation, gravatar, nickName }: NavbarProps): JSX.Element {
+    const router = useRouter()
+
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string): void => {
+        e.preventDefault()
+        router.push(href)
+    }
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -41,6 +51,7 @@ export function Navbar({ navigation, gravatar, nickName }: NavbarProps): JSX.Ele
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
                                             <a
+                                                onClick={e => handleClick(e, item.href)}
                                                 key={item.name}
                                                 href={item.href}
                                                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium focus:bg-gray-900 focus:text-white"
