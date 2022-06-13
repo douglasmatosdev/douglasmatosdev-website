@@ -1,7 +1,7 @@
 export const profile = {
     initials: 'dms',
     nickName: 'douglasmatosdev',
-    displayname: 'Douglas Matos',
+    displayName: 'Douglas Matos',
     firstName: 'Douglas',
     lastName: 'Silva',
     fullName: 'Douglas Matos da Silva',
