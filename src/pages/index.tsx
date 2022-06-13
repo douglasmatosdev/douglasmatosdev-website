@@ -1,21 +1,21 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { HomeHero, Navbar } from '../components'
+
+import { navigation, profile } from '../utils'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Douglas Matos
-        </h1>
-
-        <p className={styles.description}>
-         Father, husband, brother and software developer.
-        </p>
-
-      </main>
-    </div>
+    <>
+      <Navbar
+        navigation={navigation}
+        gravatar={profile.gravatar}
+        nickName={profile.nickName}
+      />
+      <HomeHero
+        title={profile.displayname}
+        subtitle={profile.description}
+      />
+    </>
   )
 }
 
