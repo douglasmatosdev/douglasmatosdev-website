@@ -22,7 +22,7 @@ export function Navbar({ navigation, gravatar, nickName }: NavbarProps): JSX.Ele
     }
 
     return (
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-gray-800 mb-20">
             {({ open }) => (
                 <Fragment>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
